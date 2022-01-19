@@ -1,0 +1,35 @@
+management:
+  server:
+    port: 8081
+    servlet:
+      context-path: /
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health,env,info,caches,metrics,prometheus
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  security:
+    user:
+      name: user
+      password: user
+      roles: manager
+
+open-weather:
+  url: ${OPEN_WEATHER_URL:https://api.openweathermap.org}
+  app-id: ${OPEN_WEATHER_APP_ID}
+
+spotify:
+  clientId: ${SPOTIFY_CLIENT_ID}
+  clientSecret: ${SPOTIFY_CLIENT_SECRET}
+  redirect:
+    uri: http://localhost:3000/auth/spotify/callback
+  api:
+    constants:
+    url: https://api.spotify.com
+  accounts:
+    url: https://accounts.spotify.com
