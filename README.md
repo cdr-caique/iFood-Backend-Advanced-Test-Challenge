@@ -44,7 +44,7 @@ For generating the OpenWeather variable:
 
 With all variables seted, you can run the project. After running, browse to API documentation:
 
-- localhost:8080/swagger-ui
+- http://localhost:8080/swagger-ui/
 
 It is necessary to authenticate. The default user and password are both "user".
 
